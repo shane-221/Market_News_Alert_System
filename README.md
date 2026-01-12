@@ -1,5 +1,14 @@
 # Market News Alert System
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![APIs](https://img.shields.io/badge/Uses-Stock%20%26%20News%20APIs-orange)
+![Email](https://img.shields.io/badge/Feature-Email%20Alerts-green)
+![Automation](https://img.shields.io/badge/Type-Automation-purple)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
+
+
+
 ### <u>Overview</u> 
 The Market News Alert System monitors key financial indicators using the AlphaVantage API and detects significant price movements.
 When a price crosses a predefined threshold, the system automatically retrieves relevant news articles and sends a structured email alert summarising the event. 
