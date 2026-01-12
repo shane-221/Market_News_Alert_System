@@ -6,17 +6,17 @@ When a price crosses a predefined threshold, the system automatically retrieves 
 This allows users to stay informed about market‑moving developments in real time.
 
 ### <u>Who is it for?</u>
-- Indicvidual investors: Tracking certain stocks and want to check why there is a price movement without manually checking the news. 
+- Individual investors: Tracking certain stocks and want to check why there is a price movement without manually checking the news. 
 - Traders : Traders who requres fast information to make decisions 
 - Financial analysts/ Economic Analyst: Inidivuals who monitor multiple variables and need a lightweight system to sruface relanat news. 
 - Anyone who wants automated email alerts.
 
 ### <u>Demo</u> 
                                  Terminal Output with print statements       
-<video src="./Multimedia/Output%20files.mp4" controls width="400"></video>
+<video src="Multimedia/Output%20files.mp4" controls width="400"></video>
 
                                              Email Output
-<img src ="./Multimedia/Architecture_Flowchart"  alt ="Flowchart diagram">
+<img src ="Multimedia/Output_email.jpg"  alt ="Flowchart diagram">
 
                     
 * Please note: Can apply these outputs for multiple companies in the same format. 
