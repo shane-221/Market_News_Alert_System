@@ -13,7 +13,8 @@ This allows users to stay informed about market‑moving developments in real ti
 
 ### <u>Demo</u> 
                                  Terminal Output with print statements       
-<video src="Multimedia/Output%20files.mp4" controls width="400"></video>
+### Demo Video  
+[![Click here to watch the demo](Multimedia/image.png)](Multimedia/Output_Video.mp4)
 
                                              Email Output
 <img src ="Multimedia/Output_email.jpg"  alt ="Flowchart diagram">
