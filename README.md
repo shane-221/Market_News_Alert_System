@@ -12,9 +12,18 @@ This allows users to stay informed about market‑moving developments in real ti
 - Anyone who wants automated email alerts.
 
 ### <u>Demo</u> 
-[Video of Terminal outputs](./Multimedia/Output%20files.mp4)\
-[Email Output](./Multimedia/Output_email.jpg)
+                                 Terminal Output with print statements       
+<video src="./Multimedia/Output%20files.mp4" controls width="400"></video>
+
+                                             Email Output
+<img src ="./Multimedia/Architecture_Flowchart"  alt ="Flowchart diagram">
+
+                    
 * Please note: Can apply these outputs for multiple companies in the same format. 
+
+### <u>Please Note</u>
+- Rate limit is handled using a 0.5 second pause using the ``` time.sleep()``` so function. 
+- Currently the errors are separated using if/elif/else statements and printed into the terminal.
 
 ### <u>Installation</u>
 
@@ -57,6 +66,57 @@ COMPANIES=
 
 # Price change threshold
 PRICE_CHANGE_CONDITION=
+```
+5) Run the script in main.py
+
+
+### <u>Architecture</u>
+         Flowchart showing how the supporting modules integrate into main.pY
+
+<img src ="./Multimedia/Architecture_Flowchart.jpg"  alt ="Flowchart diagram">
+
+
+### <u>Folder Structure</u>
+
+```
+MARKET_ALERT_SYSTEM/                        # Root project folder
+│
+├── Main Code/                              # Main program entry point
+│   │                             
+│   └── main.py                                 ## Runs the full market alert system
+│
+├── Structures/                             # All helper modules (APIs, email, formatting)
+│   │
+│   ├── stock_request_api.py                    ## Gets live stock prices
+│   ├── news_request_api.py                     ## Gets financial news
+│   ├── send_email.py                           ## Sends alert emails
+│   ├── website_code_conversion.py              ## Converts data for website/email display
+│   └── email_format.html                       ## HTML template for alert emails
+│
+├── Companies_List/                         # Input data for companies 
+│   │
+│   ├── Companies_list.csv                      ## List of companies that are active.
+│   └── list_of_stocks_api.py                   ## Converts company list into API symbols
+│
+├── Confidential_data/                      # Private keys & secrets
+│   │
+│   └── .env                                    ## API keys and email credentials
+│
+├── Output_Emails/                          ## Generated email alerts
+│   └── output_format_YYYY-MM-DD.html
+│
+├── Multimedia/                             ## Images & videos for documentation
+│   ├── Architecture_Flowchart.jpg
+│   ├── Output files.mp4
+│   └── Output_email.jpg
+│
+├── Documentation/                          # Project notes.
+│   └── Steps.txt
+│
+├── .gitignore                              # Prevents secrets and cache from being uploaded
+├── README.md                               # Project overview
+└── .venv/                                  # Python virtual environment
+
 ```
 
     
