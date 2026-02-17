@@ -8,11 +8,29 @@
 
 
 
-
 ### <u>Overview</u> 
-The Market News Alert System monitors key financial indicators using the AlphaVantage API and detects significant price movements.
-When a price crosses a predefined threshold, the system automatically retrieves relevant news articles and sends a structured email alert summarising the event. 
-This allows users to stay informed about market‑moving developments in real time.
+
+
+This project is an automated alert system that monitors financial variables( From AlphaVantage API) and news( NEW API) in real time. It currently tracks stock prices, but the design allows it to be extended to macroeconomic indicators such as GDP. The goal is to reduce manual monitoring by delivering timely, meaningful alerts directly to the user.
+
+### <u>Why does this project exist? </u> 
+
+While exploring financial services and macroeconomic data systems, I noticed three recurring problems:
+
+1. **Data is fragmented across multiple sources.**  
+   Market prices, news, and macroeconomic indicators all come from different APIs and platforms, making it difficult to monitor them in one place.
+
+2. **It is hard to monitor markets and macro variables 24/7.**  
+   Important movements or news events can be missed without continuous tracking, which is unrealistic for most users.
+
+### <u>Features </u> 
+This project addresses these challenges by providing an automated alert system that:
+- Continuously monitors selected variables and news using APIs  
+- Detects meaningful changes in those variables  
+- Sends real-time email alerts  
+- Currently tracks stock prices, but is designed to be extended to macroeconomic indicators (e.g., GDP, CPI, yield curves, FRED data)
+
+The goal is to create a unified, modular engine that reduces manual monitoring and brings key market or macro events directly to the users email. 
 
 ### <u>Who is it for?</u>
 - Individual investors: Tracking certain stocks and want to check why there is a price movement without manually checking the news. 
@@ -22,7 +40,6 @@ This allows users to stay informed about market‑moving developments in real ti
 
 ### <u>Demo</u> 
                                  Terminal Output with print statements       
-### Demo Video  
 [![Click here to watch the demo](Multimedia/image.png)](Multimedia/Output_Video.mp4)
 
                                              Email Output
@@ -40,7 +57,7 @@ This allows users to stay informed about market‑moving developments in real ti
 Follow these steps to set up the Market Alert System on your machine:
 1) Clone the repository: 
 ```bash 
-git clone {Name of the repostory I create}.git
+git clone {Name of the repostory I created}.git
 cd repository
 ```
 
