@@ -2,11 +2,12 @@
                                                 # Imports
 #======================================================================================================================#
 
-
+import os
 from Structures.stock_request_api import *
 from Structures.news_request_api import *
 from dotenv import load_dotenv
-load_dotenv(dotenv_path="../Confidential_data_file/.env")
+load_dotenv(dotenv_path="./Confidential_data/.env")
+print("Loaded COMPANIES:", os.getenv("COMPANIES"))
 from Structures.website_code_conversion import *
 import datetime
 from Structures.send_email import *
@@ -44,7 +45,7 @@ companies_list =companies.split(",")
 print(companies_list)
 
     #Todo: Get the company code: Company name combination
-df = pd.read_csv("../Companies_List/Companies_List.csv")
+df = pd.read_csv("./Companies_List/Companies_List.csv")
 companies_dict ={i:df[df["symbol"] == i]["name"].values[0] for i in companies_list}
 
 
@@ -70,7 +71,7 @@ for stock_code in companies_dict:
     #================================================================================================================#
 
         # Todo: Clarifying condition to send the email b
-    if price_data< -1*int(PRICE_CHANGE_CONDITION) or price_data>int(PRICE_CHANGE_CONDITION):
+    if price_data< float(PRICE_CHANGE_CONDITION) or price_data>float(PRICE_CHANGE_CONDITION):
         # Todo: News email request
         time.sleep(2)
         news = NewsApi(stock_code, NEWS_API_KEY, NEWS_URL)
@@ -103,7 +104,7 @@ for stock_code in companies_dict:
 
 
 # Todo: Places the data into the correct section of the template html file.
-with open("../Structures/email_format.html", mode="r") as file:
+with open("./Structures/email_format.html", mode="r") as file:
     email_content  = file.read()
     final_content_html = email_content.replace("<!-- Inject your code here -->", final_html_code_companies)
 
@@ -111,7 +112,7 @@ with open("../Structures/email_format.html", mode="r") as file:
 
 # Todo: Once replaced- take this new file and place it into output file with date. I have a bracket in the file
 ## hence will need to use utf 8 instead of cp1252.
-with open(f"../Output_Emails/output_format_{TODAY}.html", mode="w", encoding="utf-8") as file:
+with open(f"Output_Emails/output_format_{TODAY}.html", mode="w", encoding="utf-8") as file:
     file.write(final_content_html)
 
 # Todo: send the email using the correct subject and parameters.

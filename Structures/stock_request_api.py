@@ -1,4 +1,5 @@
 import requests
+import traceback
 
 
 class StockApi:
@@ -29,8 +30,9 @@ class StockApi:
                 return percent_change
 
             else:
-                print(f"Full response:{data["Error Message"].capitalize()} ")
+                print(f"The Price API Failed. Full response:{data}.  ")
                 return None
         except Exception as e:
             print(f"There is an error with Price API:{e}.")
+            traceback.print_exc()
             return None
